@@ -58,6 +58,9 @@ $('body').terminal({
         "\nplay_satellites"+
         "\nplay_KH_AMV");
     },
+    get_ye_flask: function(){
+        this.echo("You cannot get ye flask!");
+    },
 
     help: function () {
         this.echo('iam - use "iam" to enter your name'
@@ -221,7 +224,7 @@ $('body').terminal({
     }
 },
  {
-    greetings: 'Hello, User. Type "help" for command list.'
+    greetings: 'Hello, User. Type "ls" for command list.'
 
 });
 </script>
