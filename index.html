@@ -22,7 +22,6 @@
 <body>
     <audio id="savingFace">
         <source src="savingFace.wav" type="audio/wav">
-
       </audio>
  
 <script>
@@ -62,12 +61,17 @@ $('body').terminal({
         + '\nlisten'
         + '\nlyrics');
     },
-    //PLAY
     play_savingface: function(){
+        let savingFaceVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/4pqBZkq5J3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        this.echo(savingFaceVid);
+    },
+    //PLAY
+    /*play_savingface: function(){
         let x = document.getElementById("savingFace");
         x.play();
-
+    
     },
+    */
     //LYRICS
     savingface: function() {
                 this.echo("i break bread over silent lonely hearts are folding shut," +
