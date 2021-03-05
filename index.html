@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+
+    <style type="text/css">
+        .terminal,
+        span,
+        .cmd,
+        div {
+            --color: rgba(189, 186, 5, 0.99);
+        }
+ 
+        .terminal,
+        span {
+            --size: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <audio id="savingFace">
+        <source src="savingFace.wav" type="audio/wav">
+
+      </audio>
+ 
+<script>
+$('body').terminal({
+    iam: function (name) {
+        this.echo('Hello, ' + name 
+        + '. Welcome to madelynmunsell.com.');
+    },
+    who: function () {
+        this.echo('madelyn munsell');
+    },
+    title: function(){
+        this.echo('a-thousand-little-deaths');
+    },
+    when: function() {
+        this.echo('11 may 2021');
+    },
+    lyrics: function(){
+        this.echo("Which song would you like to view?" + 
+        "\nsavingface" +
+        "\nlikeitornot" +
+        "\ninyouwhowillend"+
+        "\nicannotadoreyou");  
+    },
+    listen: function(){
+        this.echo("Which song would you like to listen to?"+
+        "\nplay_savingface" +
+        "\nplay_likeitornot" +
+        "\nplay_inyouwhowillend" +
+        "\nplay_icannotadoreyou");
+    },
+
+    help: function () {
+        this.echo('iam - use "iam" to enter your name'
+        + '\nwhen'
+        + '\ntitle'
+        + '\nlisten'
+        + '\nlyrics');
+    },
+    //PLAY
+    play_savingface: function(){
+        let x = document.getElementById("savingFace");
+        x.play();
+
+    },
+    //LYRICS
+    savingface: function() {
+                this.echo("i break bread over silent lonely hearts are folding shut," +
+                "\ni've drunk wine alongside the ghostly faces of our time." +
+                "\ni head for the door, i don't ever find it open anymore." +
+                "\nif i listen closely would you say you adore me after all?" +
+                "\nlonely, lonely heart you have done me dirtier than most." +
+                "\nholy, holy water you have left me thirsty." +
+                "\nyour saving grace, if you can call it that, "+ 
+                "\nor saving face to hide the cowardice feeling that sneaks in," +
+                "\nwhen you're under attack." +
+                "\ncut your bride, bring her blood up to the surface"+
+                "\nso you can cry your loudest tears, your forget-me-nots, "+
+                "\nyour message falls flat, it won't bring her back." +
+                "\nlonely, lonely heart you have done me dirtier than most. " +
+                "\nholy, holy water you have left me thirsty." +
+                "\nyour saving grace, if you can call it that, "+ 
+                "\nor saving face to hide the cowardice feeling that sneaks in," +
+                "\nwhen you're under attack." +
+
+                "\na politic of futures, decider of fates, "+
+                "\na message of forgiveness, but only certain ways" +
+                "\na savior of the broken, but never needing saved.");
+    },
+    likeitornot: function() {
+        this.echo("lyrics");
+    }
+}, {
+    greetings: 'Hello, User. Type "help" for command list'
+
+});
+</script>
+</body>
+</html>
