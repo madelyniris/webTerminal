@@ -44,14 +44,19 @@ $('body').terminal({
         "\nsavingface" +
         "\nlikeitornot" +
         "\ninyouwhowillend"+
-        "\nicannotadoreyou");  
+        "\nicannotadoreyou"+
+        "\nfuneralmask"+
+        "\nsatellites");  
     },
     listen: function(){
         this.echo("Which song would you like to listen to?"+
         "\nplay_savingface" +
         "\nplay_likeitornot" +
         "\nplay_inyouwhowillend" +
-        "\nplay_icannotadoreyou");
+        "\nplay_icannotadoreyou" +
+        "\nplay_funeralmask"+
+        "\nplay_satellites"+
+        "\nplay_KH_AMV");
     },
 
     help: function () {
@@ -85,7 +90,7 @@ $('body').terminal({
         let satellites = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/9GIqpctDBpI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(satellites);
     },
-    play_KH_amv: function(){
+    play_KH_AMV: function(){
         let khAMV = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/uAvse5plWxg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(khAMV);
     },
@@ -145,10 +150,78 @@ $('body').terminal({
         "\nshe'll leave you lifeless,she'll keep the light on, so you can see"+
         "\nthat she's slow dancing, she's all alone inside her house" +
         "\nshe'll leave you lonely. she'll make a heaven out of hell, whether you like it or not.");
+    },
+    inyouwhowillend: function(){
+        this.echo("how can i see the face of a child, and not warn of the grace of good luck."+
+        "\nwhere you're born is where you'll end,less your parents are good friends of the abusers of the hungry and the poor."+
+        "\nnot to say you'll fall in, then againsometimes where you start is better than the end."+
+        "\nyou'll go out, make amends with the ones you swore to end and you'll go back to where it all began."+
+        "\nit's something like a story, the ghost of ever-wanting more, holding on to broken glass,"+
+        "\nhoping that it cuts you, and you might feel some war break skin, and you'll let the joyless win."+
+        "\nin some time, you'll find ways to be grown, one of which is led by rich men and their guns." +
+        "\nyou'll fight their fights, and win their wars and you'll watch your good friends die over some oil, or the shade of their skin."+
+        "\nit's something like a story, the ghost of ever-wanting more, holding on to broken glass"+
+        "\nhoping that it cuts you, and you might feel some war break skin, and you'll let the joyless win."+
+        "\nin the blood of the people before, in the land where you planted your roots, "+
+        "\nwhere the violence all began, it's in you who will end a vicious cycle of greed and persecution.");
+    },
+    icannotadoreyou: function(){
+        this.echo("cold hearted -- in your worst, i start to freeze."+
+        "\ncool water -- you'll cry no tears for me."+
+        "\nhold yourself higher, and start careless fires"+
+        "\nyour silence is what makes me believe."+
+        "\ni'll find your arrow lodged into my core,"+
+        "\nyou'll string me high up, cause that's what friends are for,"+
+        "\nand if i speak out, you swear you'll cut the cord cause i cannot adore you."+
+        "\nlost and found, you're making rounds to see which friends you cast away, not those you have betrayed."+
+        "\nhold yourself higher, and start careless fires"+
+        "\nyour silence is what makes me believe."+
+        "\ni'll find your arrow lodged into my core,"+
+        "\nyou'll string me high up, cause that's what friends are for,"+
+        "\nand if i speak out, you swear you'll cut the cord cause i cannot adore you."+
+        "\nblood over sidewalks, falling onto your knees,"+
+        "\noff in the distance heaven is yours to keep."+
+        "\nyou're the resistance, but say it like you mean it, you wanna leave.");
+    },
+    funeralmask: function(){
+        this.echo("blood red carpet, i don't need this."+
+        "\nit's like i never knew you, it's like i never cared. "+
+        "\nvelvet skin, you look surprised to see me in your audience, but i didn't have a choice."+
+        "\nit's the color of your hair that makes me think that no one noticed or the water in their eyes covered it up."+
+        "\ni don't recognize the face you left when all the photographs say differently, to me, the smiles just don't add up."+
+        "\nstiff like paper, i can't breathe the air with all these people scribbling their names inside your book."+
+        "\nstill and gentle, no one's faces move in conversations"+
+        "\ndry like sand, but still you smell like lye.");
+    
+    },
+    satellites: function(){
+        this.echo("what kind of simple thing is waking up to darkness"+
+        "\nonly lit by lonely streetlights in the city that we love?"+
+        "\nwhat kind of silence is it, sitting here with no one in it"+
+        "\nkilling time like cain and abel loathing passersby?"+
+        "\ncounting stars as they're falling, "+
+        "\nwatching satellites cross the southern sky"+
+        "\nbreaking hearts as you're falling,"+
+        "\nwatching ice turn over and i'm calling off your search."+
+        "\nwhat kind of jealousy is making light of evil things,"+
+        "\nand tossing rocks into the sea just hoping that they skip?"+
+        "\nwhat kind of melody is singing in a different key, "+
+        "\nwhen all the choir sings of only loving and the lost?");
+    },
+    blue: function(){
+        this.echo("i'll stay quiet, mouth to mouth i'll break my highest vow."+
+        "\nsoft and slowly, loud and lonely, i won't sing out loud."+
+        "\ni'll find you in the corners of my mouth when you're painted blue."+
+        "\nwhat you have is what i want. you're out of town for now."+
+        "\ni'll find you in the corners of my mouth when you're painted blue."+
+        "\nso synthetic, polyester stretched too thin, and i'll think of you."+
+        "\nseparate bodies,low turnout. your words are full of doubt."+
+        "\ni'll find you in the corners of my mouth when you're painted blue."+
+        "\nso synthetic, polyester stretched too thin, and i'll think of you.");
     }
 },
  {
-    greetings: 'Hello, User. Type "help" for command list'
+    greetings: 'Hello, User. Type "help" for command list.'
 
 });
 </script>
