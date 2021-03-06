@@ -119,30 +119,44 @@ $('body').terminal({
     },*/
     //VIDEOS HERE
     play_saving_face: function(){
+        this.echo("You want to hear <saving_face>"+
+        "\nHere is <saving_face>:");
         let savingFaceVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/4pqBZkq5J3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(savingFaceVid);
     },
     play_like_it_or_not: function(){
+        this.echo("You want to listen to <like_it_or_not>"+
+        "\nHere is <like_it_or_not>:");
         let likeItOrNotVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/CS8Oyk-ZLIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(likeItOrNotVid);
     },
     play_in_you_who_will_end: function(){
+        this.echo("Let's listen to <in_you_who_will_end>"+
+        "\nHere is <in_you_who_will_end>:");
         let inYouWhoWillEnd = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/XNtspDbpbZg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(inYouWhoWillEnd);
     },
-    play_icannot_adore_you: function(){
+    play_i_cannot_adore_you: function(){
+        this.echo("You chose <i_cannot_adore_you>."+
+        "\nHere is <i_cannot_adore_you>:");
         let iCannotAdoreYouVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/VcpDOAMvbG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(iCannotAdoreYouVid);
     },
     play_funeral_mask: function(){
+        this.echo("I see you want to listen to <funeral_mask>."+
+        "\nBelow is <funeral_mask>:");
         let funeralMask = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/FqcX6I5pXRU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(funeralMask);
     },
     play_satellites: function(){
+        this.echo("I understand you want to listen to <satellites>."+
+        "\nHere is <satellites>:");
         let satellites = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/9GIqpctDBpI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(satellites);
     },
     play_KH_AMV: function(){
+        this.echo("Of course, you would select <KH_AMV>."+
+        "\nHere is <KH_AMV>, nerd.");
         let khAMV = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/uAvse5plWxg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(khAMV);
     },
@@ -290,7 +304,9 @@ $('body').terminal({
     }
 },
  {
-    greetings: 'Hello, User. Type "help" for command list.'
+    greetings: 'Hello, User. '+
+    '\nWhat brings you here? '+
+    '\nType "help" for command list.'
 
 });
 </script>
