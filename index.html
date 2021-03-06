@@ -50,42 +50,94 @@ $('body').terminal({
     },
     listen: function(){
         this.echo("Which song would you like to listen to?"+
-        "\nplay_savingface" +
-        "\nplay_likeitornot" +
-        "\nplay_inyouwhowillend" +
-        "\nplay_icannotadoreyou" +
-        "\nplay_funeralmask"+
+        "\nplay_saving_face" +
+        "\nplay_like_it_or_not" +
+        "\nplay_in_you_who_will_end" +
+        "\nplay_i_cannot_adore_you" +
+        "\nplay_funeral_mask"+
         "\nplay_satellites"+
         "\nplay_KH_AMV");
+    },
+    hello: function(){
+            this.echo("Hello there!");
     },
     get_ye_flask: function(){
         this.echo("You cannot get ye flask!");
     },
     
-        ls: function () {
+        help: function () {
         this.echo('iam - use "iam" to enter your name'
         + '\nwhen'
         + '\ntitle'
         + '\nlisten'
-        + '\nlyrics');
+        + '\nlyrics'
+        + '\ngames');
     },
-    play_savingface: function(){
+    games: function(){
+        this.echo("Which game would you like to play?"+
+        "\nplay_slimoban"+
+        "\nplay_mahjong"+
+        "\nplay_irresponsible_ninja"+
+        "\nplay_mini_battles");
+    },
+    sudo: function(){
+    this.echo("OVERRIDE WILL COMMENCE: DO YOU WISH TO CONTINUE? Y/N:");
+    },
+    y: function(){
+        this.echo("OVERRIDE COMMENCE. TYPE 'secret' FOR SECRET ACCESS.");
+    },
+    Y: function(){
+        this.echo("OVERRIDE COMMENCE. TYPE 'secret' TO SECRET ACCESS.");
+    },
+    N: function(){
+        this.echo("ABORT OVERRIDE");
+    },
+    n: function(){
+        this.echo("ABORT OVERRIDE");
+    },
+    //HIDDEN COMMANDS LISTED HERE
+    hidden: function(){
+        this.echo("HIDDEN COMMANDS:"+
+        "\ncurrent_location"+
+        "\nmore secret stuff");
+    },
+    
+    /*current_location: function(){
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+
+            } else {
+            this.echo("Geolocation is not supported by this browser.");
+            }
+            function showPosition(position){
+            this.echo("Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude);
+            let latitude = position.coords.latitude;
+            let longitude = position.coords.longitude;
+            let latlong = latitude + longitude;
+            return latlong;
+        }
+        this.echo(showPosition());
+    
+    },*/
+    //VIDEOS HERE
+    play_saving_face: function(){
         let savingFaceVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/4pqBZkq5J3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(savingFaceVid);
     },
-    play_likeitornot: function(){
+    play_like_it_or_not: function(){
         let likeItOrNotVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/CS8Oyk-ZLIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(likeItOrNotVid);
     },
-    play_inyouwhowillend: function(){
+    play_in_you_who_will_end: function(){
         let inYouWhoWillEnd = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/XNtspDbpbZg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(inYouWhoWillEnd);
     },
-    play_icannotadoreyou: function(){
+    play_icannot_adore_you: function(){
         let iCannotAdoreYouVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/VcpDOAMvbG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(iCannotAdoreYouVid);
     },
-    play_funeralmask: function(){
+    play_funeral_mask: function(){
         let funeralMask = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/FqcX6I5pXRU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(funeralMask);
     },
@@ -96,6 +148,23 @@ $('body').terminal({
     play_KH_AMV: function(){
         let khAMV = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/uAvse5plWxg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(khAMV);
+    },
+    //GAMES
+    play_slimoban: function(){
+        let slimoban = $('<iframe src="http://wanted5games.com/games/html5/slimoban-new-en-s-iga-cloud/index.html?pub=10" name="cloudgames-com" width="702" height="585" frameborder="0" scrolling="no"></iframe>');
+        this.echo(slimoban);
+    },
+    play_mahjong: function(){
+        let mahjong = $('<iframe src="http://wanted5games.com/games/html5/mahjong-quest-new-en-s-iga-cloud/index.html?pub=10" name="cloudgames-com" width="993" height="660" frameborder="0" scrolling="no"></iframe>');
+        this.echo(mahjong);
+    },
+    play_irresponsible_ninja: function(){
+        let irrNinja = $('<iframe src="http://wanted5games.com/games/html5/irresponsible-ninja-new-en-s-iga-cloud/index.html?pub=10" name="cloudgames-com" width="750" height="565" frameborder="0" scrolling="no"></iframe>');
+        this.echo(irrNinja);
+    },
+    play_mini_battles: function(){
+        let miniBattles = $('<iframe src="http://wanted5games.com/games/html5/mini-battles-12-new-en-s-iga-cloud/index.html?pub=10" name="cloudgames-com" width="936" height="527" frameborder="0" scrolling="no"></iframe>');
+        this.echo(miniBattles);
     },
     //PLAY
     /*play_savingface: function(){
@@ -223,8 +292,9 @@ $('body').terminal({
         "\nso synthetic, polyester stretched too thin, and i'll think of you.");
     }
 },
+//HIDDEN COMMANDS
  {
-    greetings: 'Hello, User. Type "ls" for command list.'
+    greetings: 'Hello, User. Type "help" for command list.'
 
 });
 </script>
