@@ -11,10 +11,6 @@
         .cmd,
         div {
             --color: rgba(189, 186, 5, 0.99);
-        }
- 
-        .terminal,
-        span {
             --size: 1.4;
         }
     </style>
@@ -26,7 +22,7 @@
  
 <script>
 $('body').terminal({
-    iam: function (name) {
+    i_am: function (name) {
         this.echo('Hello, ' + name 
         + '. Welcome to madelynmunsell.com.');
     },
@@ -98,9 +94,10 @@ $('body').terminal({
     //HIDDEN COMMANDS LISTED HERE
     hidden: function(){
         this.echo("HIDDEN COMMANDS:"+
-        "\ncurrent_location"+
+        "\nglobal_thermonuclear_war"+
         "\nmore secret stuff");
     },
+  
     
     /*current_location: function(){
             if (navigator.geolocation) {
@@ -292,7 +289,6 @@ $('body').terminal({
         "\nso synthetic, polyester stretched too thin, and i'll think of you.");
     }
 },
-//HIDDEN COMMANDS
  {
     greetings: 'Hello, User. Type "help" for command list.'
 
