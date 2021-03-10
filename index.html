@@ -3,7 +3,9 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src = "terminal.js"></script>
+    <title>madelyn_munsell</title>
 
     <style type="text/css">
         .terminal,
@@ -12,12 +14,17 @@
         div {
             --color: rgba(189, 186, 5, 0.99);
             --size: 1.4;
+            
         }
     </style>
 </head>
 <body>
-    <audio id="savingFace">
-        <source src="savingFace.wav" type="audio/wav">
+        <div id="term">
+        <div class="flicker">
+        <div class="scanlines">
+    
+    <audio id="savingFaceRemix">
+        <source src="saving_face_remix.wav" type="audio/wav">
       </audio>
  
 <script>
@@ -25,9 +32,6 @@ $('body').terminal({
     i_am: function (name) {
         this.echo('Hello, ' + name 
         + '. Welcome to madelynmunsell.com.');
-    },
-    who: function () {
-        this.echo('madelyn munsell');
     },
     title: function(){
         this.echo('a-thousand-little-deaths');
@@ -62,12 +66,12 @@ $('body').terminal({
     },
     
         help: function () {
-        this.echo('iam - use "iam" to enter your name'
-        + '\nwhen'
-        + '\ntitle'
-        + '\nlisten'
-        + '\nlyrics'
-        + '\ngames');
+        this.echo('i_am -- enter your name'
+        + '\nwhen -- release date'
+        + '\ntitle -- name of title'
+        + '\nlisten -- songs'
+        + '\nlyrics -- view lyrics'
+        + '\ngames -- play games');
     },
     games: function(){
         this.echo("Which game would you like to play?"+
@@ -80,10 +84,10 @@ $('body').terminal({
     this.echo("OVERRIDE WILL COMMENCE: DO YOU WISH TO CONTINUE? Y/N:");
     },
     y: function(){
-        this.echo("OVERRIDE COMMENCE. TYPE 'secret' FOR SECRET ACCESS.");
+        this.echo("OVERRIDE COMMENCE. TYPE THE PASSWORD FOR SECRET ACCESS.");
     },
     Y: function(){
-        this.echo("OVERRIDE COMMENCE. TYPE 'secret' TO SECRET ACCESS.");
+        this.echo("OVERRIDE COMMENCE. TYPE THE PASSWORD FOR SECRET ACCESS.");
     },
     N: function(){
         this.echo("ABORT OVERRIDE");
@@ -92,12 +96,38 @@ $('body').terminal({
         this.echo("ABORT OVERRIDE");
     },
     //HIDDEN COMMANDS LISTED HERE
-    hidden: function(){
+    sudden_13325_d34th: function(){
         this.echo("HIDDEN COMMANDS:"+
-        "\nglobal_thermonuclear_war"+
-        "\nmore secret stuff");
+        "\ndemos"+
+        "\nstems"+
+        "\nremixes"+
+        "\n");
     },
-  
+
+    demos: function(){
+        this.echo("Choose one:"+
+        "\ncoward"+
+        "\nordinary_love"+
+        "\nreason_to_believe"+
+        "\nhow_it_feels_to_fall");
+    },
+    stems: function(){
+        var str = "stems folder";
+        var result = str.link("https://www.dropbox.com/sh/y2qci9e6a9k7bl1/AABjnY_nkZtGk-h-3Xe6CtNNa?dl=0");
+        this.echo(result);
+    },
+
+    remixes: function(){
+      this.echo("Which remix would you like to listen to?"+
+      "\nsaving_face_remix"+
+      "\nwho_will_end_remix"+
+      "\nmore here")  
+    },
+    saving_face_remix: function(){
+        this.echo("<audio controls id='savingFaceRemix'><source src='saving_face_remix.wav' type='audio/wav'></audio>");
+        let x = document.getElementById("savingFaceRemix");
+        x.play();
+    },
     
     /*current_location: function(){
             if (navigator.geolocation) {
@@ -304,25 +334,39 @@ $('body').terminal({
     }
 },
  {
-    greetings: /*'\n'+
-    "                        __     __          "+ '\n' +
-    "   ____ ___  ____ _____/ /__  / /_  ______" + '\n' +
-    "  / __ `__ \/ __ `/ __  / _ \/ / / / / __ \ "+ '\n' +
-    " / / / / / / /_/ / /_/ /  __/ / /_/ / / / /" + "\n" +
-    "/_/ /_/ /_/\__,_/\__,_/\___/_/\__, /_/ /_/ " + "\n" +
-    "                             /____/      " + "\n" +
-    "                                    ____" + "\n" +
-    "   ____ ___  __  ______  ________  / / /" + "\n" +
-    "  / __ `__ \/ / / / __ \/ ___/ _ \/ / /" + "\n" +
-    " / / / / / / /_/ / / / (__  )  __/ / /" + "\n" +
-    "/_/ /_/ /_/\__,_/_/ /_/____/\___/_/_/" + "\n" +
-    "\n"+*/
+    greetings: '\n'+
+    
+ /*" __   __  _______  ______   _______  ___      __   __  __    _    __   __  __   __  __    _  _______  _______  ___      ___  "+"\n"+   
+"|  |_|  ||   _   ||      | |       ||   |    |  | |  ||  |  | |  |  |_|  ||  | |  ||  |  | ||       ||       ||   |    |   |  "+"\n"+     
+"|       ||  |_|  ||  _    ||    ___||   |    |  |_|  ||   |_| |  |       ||  | |  ||   |_| ||  _____||    ___||   |    |   |   "+"\n"+    
+"|       ||       || | |   ||   |___ |   |    |       ||       |  |       ||  |_|  ||       || |_____ |   |___ |   |    |   |    "+"\n"+   
+"|       ||       || |_|   ||    ___||   |___ |_     _||  _    |  |       ||       ||  _    ||_____  ||    ___||   |___ |   |___ "+"\n"+   
+"| ||_|| ||   _   ||       ||   |___ |       |  |   |  | | |   |  | ||_|| ||       || | |   | _____| ||   |___ |       ||       |"+"\n"+   
+"|_|   |_||__| |__||______| |_______||_______|  |___|  |_|  |__|  |_|   |_||_______||_|  |__||_______||_______||_______||_______|"+"\n"+   */
 
+
+"███    ███  █████  ██████  ███████ ██   ██    ██ ███    ██     ███    ███ ██    ██ ███    ██ ███████ ███████ ██      ██     "+"\n"+ 
+"████  ████ ██   ██ ██   ██ ██      ██    ██  ██  ████   ██     ████  ████ ██    ██ ████   ██ ██      ██      ██      ██      "+"\n"+
+"██ ████ ██ ███████ ██   ██ █████   ██     ████   ██ ██  ██     ██ ████ ██ ██    ██ ██ ██  ██ ███████ █████   ██      ██      "+"\n"+
+"██  ██  ██ ██   ██ ██   ██ ██      ██      ██    ██  ██ ██     ██  ██  ██ ██    ██ ██  ██ ██      ██ ██      ██      ██      "+"\n"+
+"██      ██ ██   ██ ██████  ███████ ███████ ██    ██   ████     ██      ██  ██████  ██   ████ ███████ ███████ ███████ ███████ "+"\n"+
+                                                                                                                             
+                                                                                                                             
+
+
+
+"\n"+
+"\n"+
+"\n"+
    "Hello, User. " +
-    '\nWhat brings you here? '+
-    '\nType "help" for command list.'
+    '\nType in a command to begin. '+
+    '\nUse "help" for command list.'
 
 });
 </script>
+
+</div>
+</div>
+</div>
 </body>
 </html>
