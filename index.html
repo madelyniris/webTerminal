@@ -33,7 +33,7 @@ $('body').terminal({
         this.echo('Hello, ' + name 
         + '. Welcome to madelynmunsell.com.');
     },
-    title: function(){
+    album_title: function(){
         this.echo('\n'+
 "       .  .                         .    .    .  .  .           .         .  .    "+"\n"+   
 ",-.    |- |-. ,-. . . ,-. ,-. ,-. ,-|    |  . |- |- |  ,-.    ,-| ,-. ,-. |- |-. ,-. "+"\n"+  
@@ -58,21 +58,24 @@ $('body').terminal({
     lyrics: function(){
         this.echo("Which song would you like to view?" + 
         "\nsavingface" +
-        "\nlikeitornot" +
+        /*"\nlikeitornot" +
         "\ninyouwhowillend"+
         "\nicannotadoreyou"+
         "\nfuneralmask"+
-        "\nsatellites");  
+        "\nsatellites"+*/
+        "\n");  
     },
     listen: function(){
         this.echo("Which song would you like to listen to?"+
         "\nplay_saving_face" +
+        /*
         "\nplay_like_it_or_not" +
         "\nplay_in_you_who_will_end" +
         "\nplay_i_cannot_adore_you" +
         "\nplay_funeral_mask"+
         "\nplay_satellites"+
-        "\nplay_KH_AMV");
+        "\nplay_KH_AMV"+*/
+        "\n");
     },
     hello: function(){
             this.echo("Hello there!");
@@ -84,18 +87,25 @@ $('body').terminal({
         help: function () {
         this.echo('i_am -- enter your name'
         + '\nwhen -- release date'
-        + '\ntitle -- name of title'
+        + '\nalbum_title -- name of title'
         + '\nlisten -- songs'
         + '\nlyrics -- view lyrics'
-        + '\ngames -- play games');
+        + '\nhidden_access -- join the email list for hidden access to the terminal'
+       // + '\ngames -- play games'
+       );
     },
-    games: function(){
+
+    hidden_access: function(){
+        let emailList = $('<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfzEOgpoXPpNF2kYXdD-firOhp0dBR4HpxeHIiJIPxvGNHcVg/viewform?embedded=true" width="400" height="250"</iframe>');
+        this.echo(emailList);
+    },
+    /*games: function(){
         this.echo("Which game would you like to play?"+
         "\nplay_slimoban"+
         "\nplay_mahjong"+
         "\nplay_irresponsible_ninja"+
         "\nplay_mini_battles");
-    },
+    },*/
     sudo: function(){
     this.echo("OVERRIDE WILL COMMENCE: DO YOU WISH TO CONTINUE? Y/N:");
     },
@@ -170,7 +180,7 @@ $('body').terminal({
         let savingFaceVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/C_aTWUWByfc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(savingFaceVid);
     },
-    play_like_it_or_not: function(){
+    /*play_like_it_or_not: function(){
         this.echo("You want to listen to <like_it_or_not>"+
         "\nHere is <like_it_or_not>:");
         let likeItOrNotVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/CS8Oyk-ZLIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
@@ -222,7 +232,7 @@ $('body').terminal({
     play_mini_battles: function(){
         let miniBattles = $('<iframe src="http://wanted5games.com/games/html5/mini-battles-12-new-en-s-iga-cloud/index.html?pub=10" name="cloudgames-com" width="936" height="527" frameborder="0" scrolling="no"></iframe>');
         this.echo(miniBattles);
-    },
+    },*/
     //PLAY
     /*play_savingface: function(){
         let x = document.getElementById("savingFace");
@@ -254,7 +264,7 @@ $('body').terminal({
                 "\na message of forgiveness, but only certain ways" +
                 "\na savior of the broken, but never needing saved.");
     },
-    likeitornot: function() {
+    /*likeitornot: function() {
         this.echo("you want a message from god"+
         "\nyou wish that heaven would show her face"+
         "\nyou feel she's hiding round corners, dancing in shadowsdeciding your fate."+
@@ -347,7 +357,7 @@ $('body').terminal({
         "\nseparate bodies,low turnout. your words are full of doubt."+
         "\ni'll find you in the corners of my mouth when you're painted blue."+
         "\nso synthetic, polyester stretched too thin, and i'll think of you.");
-    }
+    }*/
 },
  {
     greetings: '\n'+
