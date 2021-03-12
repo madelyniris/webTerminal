@@ -26,6 +26,15 @@
     <audio id="savingFaceRemix">
         <source src="saving_face_remix.wav" type="audio/wav">
       </audio>
+      <audio id="coward">
+          <source src = "coward.wav" type = "audio/wav">
+      </audio>
+      <audio id="feels-to-fall">
+          <source src = "how-it-feels-to-fall.wav" type="audio/wav">
+      </audio>
+      <audio id = "ordinary-love">
+          <source src = "ordinary-love.wav" type="audio/wav">
+      </audio>
  
 <script>
 $('body').terminal({
@@ -134,9 +143,69 @@ $('body').terminal({
         this.echo("Choose one:"+
         "\ncoward"+
         "\nordinary_love"+
-        "\nreason_to_believe"+
         "\nhow_it_feels_to_fall");
     },
+    coward: function(){ 
+        let start = $("<input id='startButton' class='button' value='listen' />");
+        this.echo(start);
+        document.getElementById('startButton').onclick = function(){
+            let x = document.getElementById("coward");
+            x.play();
+        }
+        let stop = $("<input id='stopButton' class='button' value='stop' />")
+        this.echo(stop);
+        document.getElementById('stopButton').onclick = function() {
+            var sounds = document.getElementsByTagName('audio');
+            for (i=0; i<sounds.length; i++){
+                sounds[i].pause();
+            }
+        }
+    },
+    ordinary_love: function(){
+        let start = $("<input id='startButton' class='button' value='listen' />");
+        this.echo(start);
+        document.getElementById('startButton').onclick = function(){
+            let x = document.getElementById("ordinary-love");
+            x.play();
+        }
+        let stop = $("<input id='stopButton' class='button' value='stop' />")
+        this.echo(stop);
+        document.getElementById('stopButton').onclick = function() {
+            var sounds = document.getElementsByTagName('audio');
+            for (i=0; i<sounds.length; i++){
+                sounds[i].pause();
+            }
+        }
+    },
+    how_it_feels_to_fall: function(){
+        this.echo("type 'pause' to pause audio");
+        let start = $("<input id='startButton' class='button' value='listen' />");
+        this.echo(start);
+        document.getElementById('startButton').onclick = function(){
+            let x = document.getElementById("feels-to-fall");
+            x.play();
+        }
+        let stop = $("<input id='stopButton' class='button' value='stop' />")
+        this.echo(stop);
+        document.getElementById('stopButton').onclick = function() {
+            var sounds = document.getElementsByTagName('audio');
+            for (i=0; i<sounds.length; i++){
+                sounds[i].pause();
+            }
+        }
+    },
+
+    pause: function(){
+        let stop = $("<input id='stopButton' type='button' value='Stop All Audio' />")
+        this.echo(stop);
+        document.getElementById('stopButton').onclick = function() {
+            var sounds = document.getElementsByTagName('audio');
+            for (i=0; i<sounds.length; i++){
+                sounds[i].pause();
+            }
+        }
+    },
+    
     stems: function(){
         var str = "stems folder";
         var result = str.link("https://www.dropbox.com/sh/y2qci9e6a9k7bl1/AABjnY_nkZtGk-h-3Xe6CtNNa?dl=0");
@@ -144,16 +213,13 @@ $('body').terminal({
     },
 
     remixes: function(){
-      this.echo("Which remix would you like to listen to?"+
-      "\nsaving_face_remix"+
-      "\nwho_will_end_remix"+
-      "\nmore here")  
+      this.echo("Nothing to see here yet, check back closer to the album release in May");
     },
-    saving_face_remix: function(){
+   /* saving_face_remix: function(){
         this.echo("<audio controls id='savingFaceRemix'><source src='saving_face_remix.wav' type='audio/wav'></audio>");
         let x = document.getElementById("savingFaceRemix");
         x.play();
-    },
+    },*/
     
     /*current_location: function(){
             if (navigator.geolocation) {
