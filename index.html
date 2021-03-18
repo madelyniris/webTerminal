@@ -90,6 +90,12 @@ $('body').terminal({
     get_ye_flask: function(){
         this.echo("You cannot get ye flask!");
     },
+    donate: function(){
+        let blackGirlsCode=$('<a href = "https://donorbox.org/support-black-girls-code"> Black Girls Code </a>');
+        this.echo(blackGirlsCode);
+        let AAPI=$('<a href = "https://www.imreadymovement.org/donate"> AAPI Women Lead </a>');
+        this.echo(AAPI);
+    },
     
         help: function () {
         this.echo('i_am -- enter your name'
