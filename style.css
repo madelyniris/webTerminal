@@ -14,6 +14,62 @@
   pointer-events: none;
   animation: flicker 0.01s infinite;
 }
+.flicker1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(63, 63, 63, 0.01);
+  
+  opacity: 30;
+  z-index: 50;
+  pointer-events: none;
+  animation: flicker 4s infinite;
+}
+body1 {
+  background-color: black;
+  color: yellow;
+  font-family: "Lucida Console";
+}
+header1 {
+  color: yellow;
+  font-family: "Lucida Console";
+}
+.input {
+  background-color:rgba(189, 186, 5, 0.99);
+  color: black;
+  font-family: "Lucida Console";
+}
+.required-email {
+  background-color:rgba(189, 186, 5, 0.99);
+  color: black;
+  font-family: "Lucida Console";
+}
+
+.FNAME {
+  background-color:rgba(189, 186, 5, 0.99);
+  color: black;
+  font-family: "Lucida Console";
+}
+
+.LNAME {
+  background-color:rgba(189, 186, 5, 0.99);
+  color: black;
+  font-family: "Lucida Console";
+}
+
+.birthday{
+  background-color:rgba(189, 186, 5, 0.99);
+  color: black;
+  font-family: "Lucida Console";
+}
+
+.response{
+  background-color:rgba(189, 186, 5, 0.99);
+  color: black;
+  font-family: "Lucida Console";
+}
 .button {
   background-color: rgba(189, 186, 5, 0.99);
   color: black;
