@@ -109,6 +109,7 @@ $('body').terminal({
         //+ '\nlyrics -- view lyrics'
         + '\ndonate-- donate to Black Girls Code and AAPI Women Lead'
         + '\nhidden_access -- join the email list for hidden access to the terminal'
+        + '\nerase -- erase terminal history'
        // + '\ngames -- play games'
        );
     },
@@ -124,6 +125,15 @@ $('body').terminal({
     },
     blog: function(){
         window.location.href = "blog.html";
+    },
+    erase: function(){
+        location.reload();
+    },
+    sup: function(){
+        this.echo("nm, u?");
+    },
+    nm: function(){
+        this.echo("sick. type 'help' if you need help finding commands.");
     },
 
     hidden_access: function(){
@@ -314,25 +324,29 @@ document.getElementById('submitButton').onclick = function(){
         this.echo(savingFaceVid);
         this.echo('\n');
     },
-    /*play_like_it_or_not: function(){
+    play_like_it_or_not: function(){
         this.echo("You want to listen to <like_it_or_not>"+
         "\nHere is <like_it_or_not>:");
-        let likeItOrNotVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/CS8Oyk-ZLIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        let likeItOrNotVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/fpX0WOdvOro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(likeItOrNotVid);
     },
     play_in_you_who_will_end: function(){
         this.echo("Let's listen to <in_you_who_will_end>"+
         "\nHere is <in_you_who_will_end>:");
-        let inYouWhoWillEnd = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/XNtspDbpbZg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        let inYouWhoWillEnd = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/EpzDKDqUAnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(inYouWhoWillEnd);
     },
     play_i_cannot_adore_you: function(){
         this.echo("You chose <i_cannot_adore_you>."+
         "\nHere is <i_cannot_adore_you>:");
-        let iCannotAdoreYouVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/VcpDOAMvbG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        let iCannotAdoreYouVid = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/wkImXTvBdGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(iCannotAdoreYouVid);
     },
-    play_funeral_mask: function(){
+    bye: function(){
+        window.location = 'about:blank';
+    },
+   
+    /*play_funeral_mask: function(){
         this.echo("I see you want to listen to <funeral_mask>."+
         "\nBelow is <funeral_mask>:");
         let funeralMask = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/FqcX6I5pXRU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
@@ -350,6 +364,7 @@ document.getElementById('submitButton').onclick = function(){
         let khAMV = $('<iframe width="560" height="315" src="https://www.youtube.com/embed/uAvse5plWxg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
         this.echo(khAMV);
     },
+    
     //GAMES
     play_slimoban: function(){
         let slimoban = $('<iframe src="http://wanted5games.com/games/html5/slimoban-new-en-s-iga-cloud/index.html?pub=10" name="cloudgames-com" width="702" height="585" frameborder="0" scrolling="no"></iframe>');
