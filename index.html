@@ -42,6 +42,26 @@ $('body').terminal({
         this.echo('Hello, ' + name 
         + '. Welcome to madelynmunsell.com.');
     },
+    album_title: function(){
+        this.echo('a-thousand-little-deaths\n');
+/*"       .  .                         .    .    .  .  .           .         .  .    "+"\n"+   
+",-.    |- |-. ,-. . . ,-. ,-. ,-. ,-|    |  . |- |- |  ,-.    ,-| ,-. ,-. |- |-. ,-. "+"\n"+  
+",-| -- |  | | | | | | `-. ,-| | | | | -- |  | |  |  |  |-' -- | | |-' ,-| |  | | `-. "+"\n"+  
+"`-^    `' ' ' `-' `-^ `-' `-^ ' ' `-^    `' ' `' `' `' `-'    `-^ `-' `-^ `' ' ' `-' "+"\n"+  */                                                                                  
+                                                                                    
+    },
+    when: function() {
+        this.echo("\n"+
+
+" __   __  _______  __   __    _______  _______  _______  ____  "+"\n"+  
+"|  |_|  ||   _   ||  | |  |  |       ||  _    ||       ||    | "+"\n"+  
+"|       ||  |_|  ||  |_|  |  |____   || | |   ||____   | |   | "+"\n"+  
+"|       ||       ||       |   ____|  || | |   | ____|  | |   | "+"\n"+  
+"|       ||       ||_     _|  | ______|| |_|   || ______| |   | "+"\n"+  
+"| ||_|| ||   _   |  |   |    | |_____ |       || |_____  |   | "+"\n"+  
+"|_|   |_||__| |__|  |___|    |_______||_______||_______| |___| "+"\n"
+ );
+    },
     lyrics: function(){
         this.echo("Which song would you like to view?" + 
         "\nsavingface" +
@@ -84,6 +104,7 @@ $('body').terminal({
         + '\nlisten'
         + '\nportfolio'
         + '\ntutorials'
+        + '\nblog'
         //+ '\nlyrics -- view lyrics'
         + '\ndonate-- donate to Black Girls Code and AAPI Women Lead'
         + '\nhidden_access -- join the email list for hidden access to the terminal'
@@ -99,6 +120,9 @@ $('body').terminal({
         +"\n Here I will share music, projects, thoughts, and even tutorials"
         +"\n(for those of you interested in learning to code or are interested in open-source GIS!)."
         +"\n Thanks for checking out the page -- If you want to reach me, please email me at madelyn.munsell@gmail.com.")
+    },
+    blog: function(){
+        window.location.href = "blog.html";
     },
 
     hidden_access: function(){
@@ -373,7 +397,7 @@ document.getElementById('submitButton').onclick = function(){
                 "\na message of forgiveness, but only certain ways" +
                 "\na savior of the broken, but never needing saved.");
     },
-    likeitornot: function() {
+    /*likeitornot: function() {
         this.echo("you want a message from god"+
         "\nyou wish that heaven would show her face"+
         "\nyou feel she's hiding round corners, dancing in shadowsdeciding your fate."+
@@ -429,7 +453,7 @@ document.getElementById('submitButton').onclick = function(){
         "\nand if i speak out, you swear you'll cut the cord cause i cannot adore you."+
         "\nblood over sidewalks, falling onto your knees,"+
         "\noff in the distance heaven is yours to keep."+
-        "\nyou're the resistance, but say it like you mean it, you wanna leave."); /*
+        "\nyou're the resistance, but say it like you mean it, you wanna leave.");
     },
     funeralmask: function(){
         this.echo("blood red carpet, i don't need this."+
@@ -470,6 +494,28 @@ document.getElementById('submitButton').onclick = function(){
 },
  {
     greetings: '\n'+
+    
+ /*" __   __  _______  ______   _______  ___      __   __  __    _    __   __  __   __  __    _  _______  _______  ___      ___  "+"\n"+   
+"|  |_|  ||   _   ||      | |       ||   |    |  | |  ||  |  | |  |  |_|  ||  | |  ||  |  | ||       ||       ||   |    |   |  "+"\n"+     
+"|       ||  |_|  ||  _    ||    ___||   |    |  |_|  ||   |_| |  |       ||  | |  ||   |_| ||  _____||    ___||   |    |   |   "+"\n"+    
+"|       ||       || | |   ||   |___ |   |    |       ||       |  |       ||  |_|  ||       || |_____ |   |___ |   |    |   |    "+"\n"+   
+"|       ||       || |_|   ||    ___||   |___ |_     _||  _    |  |       ||       ||  _    ||_____  ||    ___||   |___ |   |___ "+"\n"+   
+"| ||_|| ||   _   ||       ||   |___ |       |  |   |  | | |   |  | ||_|| ||       || | |   | _____| ||   |___ |       ||       |"+"\n"+   
+"|_|   |_||__| |__||______| |_______||_______|  |___|  |_|  |__|  |_|   |_||_______||_|  |__||_______||_______||_______||_______|"+"\n"+   */
+
+
+/*"███    ███  █████  ██████  ███████ ██   ██    ██ ███    ██     ███    ███ ██    ██ ███    ██ ███████ ███████ ██      ██     "+"\n"+ 
+"████  ████ ██   ██ ██   ██ ██      ██    ██  ██  ████   ██     ████  ████ ██    ██ ████   ██ ██      ██      ██      ██      "+"\n"+
+"██ ████ ██ ███████ ██   ██ █████   ██     ████   ██ ██  ██     ██ ████ ██ ██    ██ ██ ██  ██ ███████ █████   ██      ██      "+"\n"+
+"██  ██  ██ ██   ██ ██   ██ ██      ██      ██    ██  ██ ██     ██  ██  ██ ██    ██ ██  ██ ██      ██ ██      ██      ██      "+"\n"+
+"██      ██ ██   ██ ██████  ███████ ███████ ██    ██   ████     ██      ██  ██████  ██   ████ ███████ ███████ ███████ ███████ "+"\n"+
+  */
+
+/*               
+" _____ _____ "+"\n"+  
+"|     |     | "+"\n"+   
+"| | | | | | |  "+"\n"+  
+"|_|_|_|_|_|_|  "+"\n"+  */
 
 "███    ███ ███    ███    "+"\n"+ 
 "████  ████ ████  ████     "+"\n"+
